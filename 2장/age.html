@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age</title>
+    <link rel="stylesheet" href="css/age.css">
+</head>
+<body>
+    
+    <!-- 버튼을 클릭 calc()호출 -->
+    <button class="btn" onclick="calc()">나이계산</button>
+    <div id="result" class="show">(결과값 표시)</div>
+
+    <script>
+
+        //함수 calc()선언과 구현을 하고 있다.
+        function calc(){
+            var currentYear=2022; //올해 년도 변수 currentYear 저장
+            //사용자로부터 입력 받은 값을 변수 brithYear에 저장함.
+            var brithYear =prompt("태어난 연도: ","YYYY");
+
+            //변수 age를 0으로 초기화
+            var age =0;
+            
+            //실제 나이르 구하기 위한 코드 
+            age = currentYear - brithYear + 1 ;
+
+            //document는 현재 웹 브러우저의 페이지를 의미, 
+            //querySelector()는 id가 result인 웹요서div를 의미,
+            //innerHTML은 대입한값으로 html문서에 대체 하시오.
+            document.querySelector("#result").innerHTML=
+                "당신의 나이: "+age+"세"; 
+        }
+    </script>
+</body>
+</html>
