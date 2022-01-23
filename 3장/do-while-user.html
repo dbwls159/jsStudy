@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>do-while 실질적 사용 예제</title>
+</head>
+<body>
+    <script>
+        var inputString=null;
+        alert("메세지를 입력하세요");
+        alert("프로그램 종료시 q 입력");
+
+        //최소 한번은 실행 
+        do {
+            inputString =prompt("메세지 입력");
+            document.write(inputString+"<br>");
+        } while (!(inputString == "q"));
+        //q 입력->true 루프 진행
+        //! 를 사용하여 false 바꿈
+
+        document.write("종료!");
+    </script>
+</body>
+</html>

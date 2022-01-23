@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue 예제</title>
+</head>
+<body>
+    <script>
+        //2와 3의 공배수 제외 모두출력
+
+        for(var i=1;i<=100;i++){
+            //2와 3의  공배수인지 확인 하는 코드
+            if (i%2 ==0 && i%3==0) {
+                continue; //무시->증감식 이동 
+            }
+            document.write(i + "<br>");
+        }
+    </script>
+</body>
+</html>
