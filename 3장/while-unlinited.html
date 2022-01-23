@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>난수게임</title>
+</head>
+<body>
+    <script>
+        var  low =0; //범위 최소값
+        var hight =0; //범위의 최대값
+        var card =0; //정답
+
+        while (true) {
+            var count=0;//시도 횟수
+
+            low=0;
+            hight = 99;
+            card = Math.floor(Math.random()*100); //0~99난수
+            alert("수를 결정. 맞춰보세요!");
+
+            while (true) {
+                var n =0;
+                alert(low+"-"+hight);
+                count++;
+                alert("시도횟수 : "+count+"번째");
+
+                n=prompt("숫자를 입력하세요!");
+                n=parseInt(n);
+
+                if(n>hight || n<low){
+                    alert("값이 범위를 벗어났어요!");
+                }
+                else{
+                    //정상적인 범위의 수가 입력된 경우
+                    if(n == card ){
+                        alert("정답 축하해요!");
+                        break;
+
+                    }else if(n >card){
+
+                        alert("다운!")
+                        hight =n; //범위 재 지정
+                    }else{
+
+                        alert("업!")
+                        low =n; //범위 재 지정
+                    }
+                }
+            }
+            alert("시도횟수는 : "+count+"입니다");
+
+            var con =confirm("재도전?");
+            if (con == false) {
+                braek;
+            } 
+        }
+    </script>
+</body>
+</html>

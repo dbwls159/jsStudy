@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반복문(do-while)</title>
+    </head>
+    <body>
+        <script>
+            //1-100까지 합계
+            var sum = 0; //누적
+            var i = 1;
+
+            // hi
+            //while 무한루프 전용
+            //do-while문은 사용자에게 선 의사 후 루핑 ,
+            //조건식이 뒤에 있어서 최소 한번은 실행
+
+           do{
+                sum += i;
+                document.write(sum + "," + i+"<br>");
+                i++;
+            } while (i <= 100) 
+            document.write("1~" + (i - 1) + "까지의 합" + sum);
+        </script>
+    </body>
+</html>
